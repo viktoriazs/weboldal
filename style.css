@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: lightblue;
+    margin: auto;
+    text-align: center;
+}
+
+aside .gall{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.gal{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+aside{
+    text-align: left;
+}
+
+
+
+nav ul{
+    display: grid;
+    grid-template-columns:repeat(4,1fr) ;
+}
+
+header, nav, article, aside, footer, .macska{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+article{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+
+img{
+    width: 100%;
+}
+
+.kep{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul a:link{
+    color: darkorchid;
+    text-decoration: none;
+}
+
+nav ul a:visited{
+    color: rgb(20, 73, 220);
+    text-decoration: none;
+}
+
+
+nav ul a:hover{
+    color: crimson;
+}
+
+article .macska a:link{
+    color: darkorchid;
+    text-decoration: none;
+}
+
+article .macska a:visited{
+    color: rgb(20, 73, 220);
+    text-decoration: none;
+}
+
+article .macska a:hover{
+    color:crimson;
+}
+main{ 
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "h h"
+                         "n n"   
+                         "a as" 
+                         "f f"           
+    ;
+}
+header {
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+article{
+    grid-area: a;
+}
+aside{
+    grid-area: as;
+}
+footer{
+    grid-area: f;
+}
+
+@media screen and (max-width:800px){
+    main{ 
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "h "
+                             "n "   
+                             "as "
+                             "a " 
+                             "f "           
+        ;
+    }
+    nav ul{
+        grid-template-columns: 1fr ;
+    } 
+    article{
+        grid-template-columns: 1fr 1fr;
+    }
+    .kep{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+    .gal{
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+    }
+
+}
